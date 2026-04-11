@@ -1,0 +1,1151 @@
+{
+  "categories": [
+    {
+      "id": "cat-1",
+      "name": "Electronics",
+      "slug": "electronics",
+      "description": "Headphones, speakers, and everyday tech essentials. Built to last and designed to sound great wherever you go.",
+      "image": {
+        "url": "/images/products/placeholder.svg",
+        "alt": "Electronics"
+      },
+      "order": 1
+    },
+    {
+      "id": "cat-2",
+      "name": "Clothing",
+      "slug": "clothing",
+      "description": "Comfortable, well-made basics for every day. Organic fabrics and relaxed fits that look good and feel even better.",
+      "image": {
+        "url": "/images/products/placeholder.svg",
+        "alt": "Clothing"
+      },
+      "order": 2
+    },
+    {
+      "id": "cat-3",
+      "name": "Home & Kitchen",
+      "slug": "home-kitchen",
+      "description": "Thoughtful pieces for your living space. From lighting to textiles, everything you need to make a house feel like home.",
+      "image": {
+        "url": "/images/products/placeholder.svg",
+        "alt": "Home & Kitchen"
+      },
+      "order": 3
+    },
+    {
+      "id": "cat-4",
+      "name": "Accessories",
+      "slug": "accessories",
+      "description": "Bags, wallets, and everyday carry. Crafted from premium materials that age beautifully with use.",
+      "image": {
+        "url": "/images/products/placeholder.svg",
+        "alt": "Accessories"
+      },
+      "order": 4
+    },
+    {
+      "id": "cat-6",
+      "name": "Food & Drink",
+      "slug": "food-drink",
+      "description": "Coffee, tea, and specialty treats. Sourced from small producers who care about quality and sustainability.",
+      "image": {
+        "url": "/images/products/placeholder.svg",
+        "alt": "Food & Drink"
+      },
+      "order": 6
+    },
+    {
+      "id": "cat-1-1",
+      "name": "Headphones",
+      "slug": "headphones",
+      "description": "Over-ear, on-ear, and in-ear headphones for every listening style. From noise-cancelling to open-back, find your perfect pair.",
+      "parentId": "cat-1",
+      "order": 1
+    },
+    {
+      "id": "cat-1-2",
+      "name": "Speakers",
+      "slug": "speakers",
+      "description": "Portable and desktop speakers that deliver rich, room-filling sound. Built for home, travel, and everywhere in between.",
+      "parentId": "cat-1",
+      "order": 2
+    },
+    {
+      "id": "cat-1-3",
+      "name": "Chargers & Accessories",
+      "slug": "chargers-accessories",
+      "description": "Wireless chargers, cables, and tech accessories to keep your devices powered and organized.",
+      "parentId": "cat-1",
+      "order": 3
+    }
+  ],
+  "products": [
+    {
+      "id": "prod-1",
+      "name": "Wireless Over-Ear Headphones",
+      "slug": "wireless-over-ear-headphones",
+      "description": "Premium wireless headphones with active noise cancellation, 30-hour battery life, and ultra-comfortable memory foam ear cushions.",
+      "images": [
+        {
+          "url": "/images/products/placeholder.svg",
+          "alt": "Wireless headphones front view",
+          "width": 800,
+          "height": 800
+        },
+        {
+          "url": "/images/products/placeholder.svg",
+          "alt": "Wireless headphones side view",
+          "width": 800,
+          "height": 800
+        }
+      ],
+      "status": "active",
+      "categoryIds": [
+        "cat-1",
+        "cat-1-1"
+      ],
+      "tags": [
+        "wireless",
+        "noise-cancelling",
+        "bluetooth"
+      ],
+      "variants": [
+        {
+          "id": "var-1-1",
+          "productId": "prod-1",
+          "sku": "WH-BLK-001",
+          "name": "Black",
+          "price": 7999,
+          "compareAtPrice": 9999,
+          "currency": "USD",
+          "inventory": {
+            "quantity": 50,
+            "trackInventory": true,
+            "allowBackorder": false
+          },
+          "options": [
+            {
+              "name": "Color",
+              "value": "Black"
+            }
+          ],
+          "images": []
+        },
+        {
+          "id": "var-1-2",
+          "productId": "prod-1",
+          "sku": "WH-WHT-001",
+          "name": "White",
+          "price": 7999,
+          "compareAtPrice": 9999,
+          "currency": "USD",
+          "inventory": {
+            "quantity": 35,
+            "trackInventory": true,
+            "allowBackorder": false
+          },
+          "options": [
+            {
+              "name": "Color",
+              "value": "White"
+            }
+          ],
+          "images": []
+        }
+      ],
+      "featured": true,
+      "createdAt": "2025-01-15T10:00:00Z",
+      "updatedAt": "2025-01-15T10:00:00Z",
+      "rating": 4.5,
+      "reviewCount": 128,
+      "brandId": "brand-1"
+    },
+    {
+      "id": "prod-2",
+      "name": "Minimalist Desk Lamp",
+      "slug": "minimalist-desk-lamp",
+      "description": "A clean, adjustable LED desk lamp with three brightness levels and a warm-to-cool color temperature dial. Solid aluminum construction.",
+      "images": [
+        {
+          "url": "/images/products/placeholder.svg",
+          "alt": "Desk lamp on workspace",
+          "width": 800,
+          "height": 800
+        }
+      ],
+      "status": "active",
+      "categoryIds": [
+        "cat-3"
+      ],
+      "tags": [
+        "lighting",
+        "desk",
+        "minimal"
+      ],
+      "variants": [
+        {
+          "id": "var-2-1",
+          "productId": "prod-2",
+          "sku": "DL-SLV-001",
+          "name": "Silver",
+          "price": 4500,
+          "currency": "USD",
+          "inventory": {
+            "quantity": 25,
+            "trackInventory": true,
+            "allowBackorder": false
+          },
+          "options": [
+            {
+              "name": "Color",
+              "value": "Silver"
+            }
+          ],
+          "images": []
+        },
+        {
+          "id": "var-2-2",
+          "productId": "prod-2",
+          "sku": "DL-BLK-001",
+          "name": "Matte Black",
+          "price": 4500,
+          "currency": "USD",
+          "inventory": {
+            "quantity": 18,
+            "trackInventory": true,
+            "allowBackorder": false
+          },
+          "options": [
+            {
+              "name": "Color",
+              "value": "Matte Black"
+            }
+          ],
+          "images": []
+        }
+      ],
+      "featured": true,
+      "createdAt": "2025-01-20T10:00:00Z",
+      "updatedAt": "2025-01-20T10:00:00Z",
+      "rating": 4.8,
+      "reviewCount": 64,
+      "brandId": "brand-2"
+    },
+    {
+      "id": "prod-3",
+      "name": "Organic Cotton T-Shirt",
+      "slug": "organic-cotton-tshirt",
+      "description": "Heavyweight 100% organic cotton tee with a relaxed fit. Pre-shrunk and garment-dyed for a lived-in feel from day one.",
+      "images": [
+        {
+          "url": "/images/products/placeholder.svg",
+          "alt": "Cotton t-shirt front",
+          "width": 800,
+          "height": 800
+        }
+      ],
+      "status": "active",
+      "categoryIds": [
+        "cat-2"
+      ],
+      "tags": [
+        "organic",
+        "cotton",
+        "basics"
+      ],
+      "variants": [
+        {
+          "id": "var-3-1",
+          "productId": "prod-3",
+          "sku": "TS-WHT-S",
+          "name": "White / S",
+          "price": 2999,
+          "currency": "USD",
+          "inventory": {
+            "quantity": 100,
+            "trackInventory": true,
+            "allowBackorder": false
+          },
+          "options": [
+            {
+              "name": "Color",
+              "value": "White"
+            },
+            {
+              "name": "Size",
+              "value": "S"
+            }
+          ],
+          "images": []
+        },
+        {
+          "id": "var-3-2",
+          "productId": "prod-3",
+          "sku": "TS-WHT-M",
+          "name": "White / M",
+          "price": 2999,
+          "currency": "USD",
+          "inventory": {
+            "quantity": 80,
+            "trackInventory": true,
+            "allowBackorder": false
+          },
+          "options": [
+            {
+              "name": "Color",
+              "value": "White"
+            },
+            {
+              "name": "Size",
+              "value": "M"
+            }
+          ],
+          "images": []
+        },
+        {
+          "id": "var-3-3",
+          "productId": "prod-3",
+          "sku": "TS-WHT-L",
+          "name": "White / L",
+          "price": 2999,
+          "currency": "USD",
+          "inventory": {
+            "quantity": 60,
+            "trackInventory": true,
+            "allowBackorder": false
+          },
+          "options": [
+            {
+              "name": "Color",
+              "value": "White"
+            },
+            {
+              "name": "Size",
+              "value": "L"
+            }
+          ],
+          "images": []
+        },
+        {
+          "id": "var-3-4",
+          "productId": "prod-3",
+          "sku": "TS-BLK-M",
+          "name": "Black / M",
+          "price": 2999,
+          "currency": "USD",
+          "inventory": {
+            "quantity": 70,
+            "trackInventory": true,
+            "allowBackorder": false
+          },
+          "options": [
+            {
+              "name": "Color",
+              "value": "Black"
+            },
+            {
+              "name": "Size",
+              "value": "M"
+            }
+          ],
+          "images": []
+        }
+      ],
+      "featured": true,
+      "createdAt": "2025-02-01T10:00:00Z",
+      "updatedAt": "2025-02-01T10:00:00Z",
+      "rating": 4.3,
+      "reviewCount": 256,
+      "brandId": "brand-3"
+    },
+    {
+      "id": "prod-4",
+      "name": "Ceramic Pour-Over Coffee Maker",
+      "slug": "ceramic-pour-over",
+      "description": "Handcrafted ceramic dripper with a walnut wood collar. Brews a clean, bright cup. Includes a reusable stainless steel filter.",
+      "images": [
+        {
+          "url": "/images/products/placeholder.svg",
+          "alt": "Pour-over coffee maker",
+          "width": 800,
+          "height": 800
+        }
+      ],
+      "status": "active",
+      "categoryIds": [
+        "cat-3",
+        "cat-6"
+      ],
+      "tags": [
+        "coffee",
+        "ceramic",
+        "handmade"
+      ],
+      "variants": [
+        {
+          "id": "var-4-1",
+          "productId": "prod-4",
+          "sku": "PO-WHT-001",
+          "name": "Default",
+          "price": 3800,
+          "currency": "USD",
+          "inventory": {
+            "quantity": 40,
+            "trackInventory": true,
+            "allowBackorder": false
+          },
+          "options": [],
+          "images": []
+        }
+      ],
+      "featured": true,
+      "createdAt": "2025-02-10T10:00:00Z",
+      "updatedAt": "2025-02-10T10:00:00Z",
+      "rating": 4.7,
+      "reviewCount": 89,
+      "brandId": "brand-2"
+    },
+    {
+      "id": "prod-5",
+      "name": "Leather Passport Wallet",
+      "slug": "leather-passport-wallet",
+      "description": "Full-grain vegetable-tanned leather passport wallet. Fits a passport, 4 cards, and boarding passes. Ages beautifully over time.",
+      "images": [
+        {
+          "url": "/images/products/placeholder.svg",
+          "alt": "Leather wallet closed",
+          "width": 800,
+          "height": 800
+        },
+        {
+          "url": "/images/products/placeholder.svg",
+          "alt": "Leather wallet open",
+          "width": 800,
+          "height": 800
+        }
+      ],
+      "status": "active",
+      "categoryIds": [
+        "cat-4"
+      ],
+      "tags": [
+        "leather",
+        "travel",
+        "wallet"
+      ],
+      "variants": [
+        {
+          "id": "var-5-1",
+          "productId": "prod-5",
+          "sku": "PW-TAN-001",
+          "name": "Tan",
+          "price": 5200,
+          "currency": "USD",
+          "inventory": {
+            "quantity": 30,
+            "trackInventory": true,
+            "allowBackorder": false
+          },
+          "options": [
+            {
+              "name": "Color",
+              "value": "Tan"
+            }
+          ],
+          "images": []
+        },
+        {
+          "id": "var-5-2",
+          "productId": "prod-5",
+          "sku": "PW-BRN-001",
+          "name": "Dark Brown",
+          "price": 5200,
+          "currency": "USD",
+          "inventory": {
+            "quantity": 22,
+            "trackInventory": true,
+            "allowBackorder": false
+          },
+          "options": [
+            {
+              "name": "Color",
+              "value": "Dark Brown"
+            }
+          ],
+          "images": []
+        }
+      ],
+      "featured": false,
+      "createdAt": "2025-02-15T10:00:00Z",
+      "updatedAt": "2025-02-15T10:00:00Z",
+      "rating": 4.6,
+      "reviewCount": 47,
+      "brandId": "brand-4"
+    },
+    {
+      "id": "prod-6",
+      "name": "Single-Origin Coffee Beans",
+      "slug": "single-origin-coffee-beans",
+      "description": "Ethically sourced single-origin beans from Colombia. Medium roast with notes of chocolate, caramel, and citrus. 12oz bag, whole bean.",
+      "images": [
+        {
+          "url": "/images/products/placeholder.svg",
+          "alt": "Coffee beans bag",
+          "width": 800,
+          "height": 800
+        }
+      ],
+      "status": "active",
+      "categoryIds": [
+        "cat-6"
+      ],
+      "tags": [
+        "coffee",
+        "organic",
+        "fair-trade"
+      ],
+      "variants": [
+        {
+          "id": "var-6-1",
+          "productId": "prod-6",
+          "sku": "CB-12OZ-001",
+          "name": "12oz Bag",
+          "price": 1850,
+          "currency": "USD",
+          "inventory": {
+            "quantity": 200,
+            "trackInventory": true,
+            "allowBackorder": true
+          },
+          "options": [
+            {
+              "name": "Size",
+              "value": "12oz"
+            }
+          ],
+          "images": []
+        },
+        {
+          "id": "var-6-2",
+          "productId": "prod-6",
+          "sku": "CB-2LB-001",
+          "name": "2lb Bag",
+          "price": 3200,
+          "currency": "USD",
+          "inventory": {
+            "quantity": 80,
+            "trackInventory": true,
+            "allowBackorder": true
+          },
+          "options": [
+            {
+              "name": "Size",
+              "value": "2lb"
+            }
+          ],
+          "images": []
+        }
+      ],
+      "featured": false,
+      "createdAt": "2025-03-01T10:00:00Z",
+      "updatedAt": "2025-03-01T10:00:00Z",
+      "rating": 4.9,
+      "reviewCount": 312,
+      "brandId": "brand-5"
+    },
+    {
+      "id": "prod-7",
+      "name": "Portable Bluetooth Speaker",
+      "slug": "portable-bluetooth-speaker",
+      "description": "Waterproof portable speaker with 360-degree sound and 12-hour battery life. Compact enough for any adventure.",
+      "images": [
+        {
+          "url": "/images/products/placeholder.svg",
+          "alt": "Bluetooth speaker",
+          "width": 800,
+          "height": 800
+        }
+      ],
+      "status": "active",
+      "categoryIds": [
+        "cat-1",
+        "cat-1-2"
+      ],
+      "tags": [
+        "bluetooth",
+        "waterproof",
+        "portable"
+      ],
+      "variants": [
+        {
+          "id": "var-7-1",
+          "productId": "prod-7",
+          "sku": "BS-BLK-001",
+          "name": "Charcoal",
+          "price": 5999,
+          "currency": "USD",
+          "inventory": {
+            "quantity": 45,
+            "trackInventory": true,
+            "allowBackorder": false
+          },
+          "options": [
+            {
+              "name": "Color",
+              "value": "Charcoal"
+            }
+          ],
+          "images": []
+        },
+        {
+          "id": "var-7-2",
+          "productId": "prod-7",
+          "sku": "BS-GRN-001",
+          "name": "Forest Green",
+          "price": 5999,
+          "currency": "USD",
+          "inventory": {
+            "quantity": 30,
+            "trackInventory": true,
+            "allowBackorder": false
+          },
+          "options": [
+            {
+              "name": "Color",
+              "value": "Forest Green"
+            }
+          ],
+          "images": []
+        }
+      ],
+      "featured": false,
+      "createdAt": "2025-03-05T10:00:00Z",
+      "updatedAt": "2025-03-05T10:00:00Z",
+      "rating": 4.4,
+      "reviewCount": 93,
+      "brandId": "brand-1"
+    },
+    {
+      "id": "prod-8",
+      "name": "Linen Throw Pillow",
+      "slug": "linen-throw-pillow",
+      "description": "Stonewashed French linen cover with a feather-down insert. 20x20 inches. Removable, machine-washable cover.",
+      "images": [
+        {
+          "url": "/images/products/placeholder.svg",
+          "alt": "Linen throw pillow",
+          "width": 800,
+          "height": 800
+        }
+      ],
+      "status": "active",
+      "categoryIds": [
+        "cat-3"
+      ],
+      "tags": [
+        "linen",
+        "home-decor",
+        "pillow"
+      ],
+      "variants": [
+        {
+          "id": "var-8-1",
+          "productId": "prod-8",
+          "sku": "LP-NAT-001",
+          "name": "Natural",
+          "price": 3400,
+          "currency": "USD",
+          "inventory": {
+            "quantity": 60,
+            "trackInventory": true,
+            "allowBackorder": false
+          },
+          "options": [
+            {
+              "name": "Color",
+              "value": "Natural"
+            }
+          ],
+          "images": []
+        },
+        {
+          "id": "var-8-2",
+          "productId": "prod-8",
+          "sku": "LP-SLT-001",
+          "name": "Slate",
+          "price": 3400,
+          "currency": "USD",
+          "inventory": {
+            "quantity": 40,
+            "trackInventory": true,
+            "allowBackorder": false
+          },
+          "options": [
+            {
+              "name": "Color",
+              "value": "Slate"
+            }
+          ],
+          "images": []
+        }
+      ],
+      "featured": false,
+      "createdAt": "2025-03-10T10:00:00Z",
+      "updatedAt": "2025-03-10T10:00:00Z",
+      "rating": 4.2,
+      "reviewCount": 71,
+      "brandId": "brand-2"
+    },
+    {
+      "id": "prod-9",
+      "name": "Canvas Weekender Bag",
+      "slug": "canvas-weekender-bag",
+      "description": "Waxed canvas weekender with leather handles and brass hardware. Separate shoe compartment. Fits overhead bins.",
+      "images": [
+        {
+          "url": "/images/products/placeholder.svg",
+          "alt": "Canvas weekender bag",
+          "width": 800,
+          "height": 800
+        }
+      ],
+      "status": "active",
+      "categoryIds": [
+        "cat-4"
+      ],
+      "tags": [
+        "bag",
+        "travel",
+        "canvas"
+      ],
+      "variants": [
+        {
+          "id": "var-9-1",
+          "productId": "prod-9",
+          "sku": "WB-OLV-001",
+          "name": "Olive",
+          "price": 8900,
+          "currency": "USD",
+          "inventory": {
+            "quantity": 15,
+            "trackInventory": true,
+            "allowBackorder": false
+          },
+          "options": [
+            {
+              "name": "Color",
+              "value": "Olive"
+            }
+          ],
+          "images": []
+        }
+      ],
+      "featured": true,
+      "createdAt": "2025-03-15T10:00:00Z",
+      "updatedAt": "2025-03-15T10:00:00Z",
+      "rating": 4.8,
+      "reviewCount": 34,
+      "brandId": "brand-4"
+    },
+    {
+      "id": "prod-10",
+      "name": "Hardcover Dot Grid Notebook",
+      "slug": "hardcover-dot-grid-notebook",
+      "description": "192 pages of 100gsm acid-free paper with a dot grid pattern. Lay-flat binding, ribbon bookmark, and elastic closure.",
+      "images": [
+        {
+          "url": "/images/products/placeholder.svg",
+          "alt": "Dot grid notebook",
+          "width": 800,
+          "height": 800
+        }
+      ],
+      "status": "active",
+      "categoryIds": [
+        "cat-4"
+      ],
+      "tags": [
+        "notebook",
+        "stationery",
+        "writing"
+      ],
+      "variants": [
+        {
+          "id": "var-10-1",
+          "productId": "prod-10",
+          "sku": "NB-BLK-A5",
+          "name": "Black / A5",
+          "price": 2200,
+          "currency": "USD",
+          "inventory": {
+            "quantity": 150,
+            "trackInventory": true,
+            "allowBackorder": true
+          },
+          "options": [
+            {
+              "name": "Color",
+              "value": "Black"
+            },
+            {
+              "name": "Size",
+              "value": "A5"
+            }
+          ],
+          "images": []
+        },
+        {
+          "id": "var-10-2",
+          "productId": "prod-10",
+          "sku": "NB-NVY-A5",
+          "name": "Navy / A5",
+          "price": 2200,
+          "currency": "USD",
+          "inventory": {
+            "quantity": 90,
+            "trackInventory": true,
+            "allowBackorder": true
+          },
+          "options": [
+            {
+              "name": "Color",
+              "value": "Navy"
+            },
+            {
+              "name": "Size",
+              "value": "A5"
+            }
+          ],
+          "images": []
+        }
+      ],
+      "featured": false,
+      "createdAt": "2025-03-20T10:00:00Z",
+      "updatedAt": "2025-03-20T10:00:00Z",
+      "rating": 4.5,
+      "reviewCount": 185,
+      "brandId": "brand-6"
+    },
+    {
+      "id": "prod-11",
+      "name": "Merino Wool Beanie",
+      "slug": "merino-wool-beanie",
+      "description": "Extra-fine merino wool beanie. Soft, breathable, and itch-free. Double-layered for warmth without bulk.",
+      "images": [
+        {
+          "url": "/images/products/placeholder.svg",
+          "alt": "Merino wool beanie",
+          "width": 800,
+          "height": 800
+        }
+      ],
+      "status": "active",
+      "categoryIds": [
+        "cat-2",
+        "cat-4"
+      ],
+      "tags": [
+        "merino",
+        "wool",
+        "winter"
+      ],
+      "variants": [
+        {
+          "id": "var-11-1",
+          "productId": "prod-11",
+          "sku": "BN-CHR-001",
+          "name": "Charcoal",
+          "price": 3500,
+          "currency": "USD",
+          "inventory": {
+            "quantity": 75,
+            "trackInventory": true,
+            "allowBackorder": false
+          },
+          "options": [
+            {
+              "name": "Color",
+              "value": "Charcoal"
+            }
+          ],
+          "images": []
+        },
+        {
+          "id": "var-11-2",
+          "productId": "prod-11",
+          "sku": "BN-CRM-001",
+          "name": "Cream",
+          "price": 3500,
+          "currency": "USD",
+          "inventory": {
+            "quantity": 55,
+            "trackInventory": true,
+            "allowBackorder": false
+          },
+          "options": [
+            {
+              "name": "Color",
+              "value": "Cream"
+            }
+          ],
+          "images": []
+        }
+      ],
+      "featured": false,
+      "createdAt": "2025-04-01T10:00:00Z",
+      "updatedAt": "2025-04-01T10:00:00Z",
+      "rating": 4.6,
+      "reviewCount": 58,
+      "brandId": "brand-3"
+    },
+    {
+      "id": "prod-12",
+      "name": "Hand-Poured Soy Candle",
+      "slug": "hand-poured-soy-candle",
+      "description": "100% natural soy wax candle in a reusable ceramic vessel. 60-hour burn time. Available in three signature scents.",
+      "images": [
+        {
+          "url": "/images/products/placeholder.svg",
+          "alt": "Soy candle",
+          "width": 800,
+          "height": 800
+        }
+      ],
+      "status": "active",
+      "categoryIds": [
+        "cat-3"
+      ],
+      "tags": [
+        "candle",
+        "soy",
+        "home-fragrance"
+      ],
+      "variants": [
+        {
+          "id": "var-12-1",
+          "productId": "prod-12",
+          "sku": "SC-CED-001",
+          "name": "Cedar & Sage",
+          "price": 2800,
+          "currency": "USD",
+          "inventory": {
+            "quantity": 90,
+            "trackInventory": true,
+            "allowBackorder": false
+          },
+          "options": [
+            {
+              "name": "Scent",
+              "value": "Cedar & Sage"
+            }
+          ],
+          "images": []
+        },
+        {
+          "id": "var-12-2",
+          "productId": "prod-12",
+          "sku": "SC-LVN-001",
+          "name": "Lavender & Eucalyptus",
+          "price": 2800,
+          "currency": "USD",
+          "inventory": {
+            "quantity": 65,
+            "trackInventory": true,
+            "allowBackorder": false
+          },
+          "options": [
+            {
+              "name": "Scent",
+              "value": "Lavender & Eucalyptus"
+            }
+          ],
+          "images": []
+        },
+        {
+          "id": "var-12-3",
+          "productId": "prod-12",
+          "sku": "SC-VNL-001",
+          "name": "Vanilla & Tonka",
+          "price": 2800,
+          "currency": "USD",
+          "inventory": {
+            "quantity": 80,
+            "trackInventory": true,
+            "allowBackorder": false
+          },
+          "options": [
+            {
+              "name": "Scent",
+              "value": "Vanilla & Tonka"
+            }
+          ],
+          "images": []
+        }
+      ],
+      "featured": false,
+      "createdAt": "2025-04-05T10:00:00Z",
+      "updatedAt": "2025-04-05T10:00:00Z",
+      "rating": 4.7,
+      "reviewCount": 142,
+      "brandId": "brand-2"
+    },
+    {
+      "id": "prod-13",
+      "name": "Japanese Matcha Set",
+      "slug": "japanese-matcha-set",
+      "description": "Traditional matcha preparation set with a ceramic bowl (chawan), bamboo whisk (chasen), and bamboo scoop (chashaku). Includes 30g ceremonial grade matcha.",
+      "images": [
+        {
+          "url": "/images/products/placeholder.svg",
+          "alt": "Matcha set",
+          "width": 800,
+          "height": 800
+        }
+      ],
+      "status": "active",
+      "categoryIds": [
+        "cat-6",
+        "cat-3"
+      ],
+      "tags": [
+        "matcha",
+        "tea",
+        "japanese"
+      ],
+      "variants": [
+        {
+          "id": "var-13-1",
+          "productId": "prod-13",
+          "sku": "MS-SET-001",
+          "name": "Default",
+          "price": 4200,
+          "currency": "USD",
+          "inventory": {
+            "quantity": 20,
+            "trackInventory": true,
+            "allowBackorder": false
+          },
+          "options": [],
+          "images": []
+        }
+      ],
+      "featured": false,
+      "createdAt": "2025-04-08T10:00:00Z",
+      "updatedAt": "2025-04-08T10:00:00Z",
+      "rating": 4.3,
+      "reviewCount": 27,
+      "brandId": "brand-5"
+    },
+    {
+      "id": "prod-14",
+      "name": "Wireless Charging Pad",
+      "slug": "wireless-charging-pad",
+      "description": "Slim 15W fast wireless charger compatible with all Qi-enabled devices. Non-slip silicone surface, LED indicator, and built-in safety features.",
+      "images": [
+        {
+          "url": "/images/products/placeholder.svg",
+          "alt": "Wireless charging pad",
+          "width": 800,
+          "height": 800
+        }
+      ],
+      "status": "active",
+      "categoryIds": [
+        "cat-1",
+        "cat-1-3"
+      ],
+      "tags": [
+        "wireless",
+        "charger",
+        "tech"
+      ],
+      "variants": [
+        {
+          "id": "var-14-1",
+          "productId": "prod-14",
+          "sku": "WC-BLK-001",
+          "name": "Black",
+          "price": 2499,
+          "currency": "USD",
+          "inventory": {
+            "quantity": 120,
+            "trackInventory": true,
+            "allowBackorder": false
+          },
+          "options": [
+            {
+              "name": "Color",
+              "value": "Black"
+            }
+          ],
+          "images": []
+        },
+        {
+          "id": "var-14-2",
+          "productId": "prod-14",
+          "sku": "WC-WHT-001",
+          "name": "White",
+          "price": 2499,
+          "currency": "USD",
+          "inventory": {
+            "quantity": 85,
+            "trackInventory": true,
+            "allowBackorder": false
+          },
+          "options": [
+            {
+              "name": "Color",
+              "value": "White"
+            }
+          ],
+          "images": []
+        }
+      ],
+      "featured": false,
+      "createdAt": "2025-04-10T10:00:00Z",
+      "updatedAt": "2025-04-10T10:00:00Z",
+      "rating": 4.4,
+      "reviewCount": 203,
+      "brandId": "brand-1"
+    }
+  ],
+  "brands": [
+    {
+      "id": "brand-1",
+      "name": "Volt Audio",
+      "slug": "volt-audio",
+      "description": "Premium audio equipment designed for audiophiles and everyday listeners alike. Volt Audio combines cutting-edge technology with timeless design."
+    },
+    {
+      "id": "brand-2",
+      "name": "Luma Home",
+      "slug": "luma-home",
+      "description": "Modern home goods that blend form and function. Luma Home creates pieces that elevate your space without overwhelming it."
+    },
+    {
+      "id": "brand-3",
+      "name": "Everlane Basics",
+      "slug": "everlane-basics",
+      "description": "Radically transparent clothing made from premium organic materials. Simple, well-made basics you can feel good about wearing."
+    },
+    {
+      "id": "brand-4",
+      "name": "Nomad Goods",
+      "slug": "nomad-goods",
+      "description": "Travel-ready accessories built from full-grain leather and waxed canvas. Designed to age beautifully and go everywhere you do."
+    },
+    {
+      "id": "brand-5",
+      "name": "Ritual Roasters",
+      "slug": "ritual-roasters",
+      "description": "Small-batch, ethically sourced coffee and tea from independent farms. Every cup tells a story of craftsmanship and care."
+    },
+    {
+      "id": "brand-6",
+      "name": "Appointed Co.",
+      "slug": "appointed-co",
+      "description": "Thoughtfully designed stationery and desk accessories. Made in small batches with quality materials that inspire creativity."
+    }
+  ]
+}
