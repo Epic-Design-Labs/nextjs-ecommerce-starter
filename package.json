@@ -1,6 +1,24 @@
 {
-  "name": "ecommerce-starter-throttle",
-  "version": "0.1.0",
+  "name": "nextjs-ecommerce-starter",
+  "version": "1.0.0",
+  "description": "A free, production-ready Next.js ecommerce starter template built with Tailwind CSS and shadcn/ui.",
+  "author": "Epic Design Labs <support@epicdesignlabs.com> (https://epicdesignlabs.com)",
+  "license": "MIT",
+  "homepage": "https://github.com/Epic-Design-Labs/nextjs-ecommerce-starter",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Epic-Design-Labs/nextjs-ecommerce-starter.git"
+  },
+  "keywords": [
+    "nextjs",
+    "ecommerce",
+    "starter",
+    "template",
+    "tailwindcss",
+    "shadcn-ui",
+    "react",
+    "typescript"
+  ],
   "private": true,
   "scripts": {
     "dev": "next dev",

@@ -12,9 +12,29 @@ import { PLACEHOLDER_IMAGE } from "@/lib/constants"
 import { productRepository, categoryRepository } from "@/lib/repositories"
 
 export const metadata: Metadata = {
-  title: `${siteConfig.name} — ${siteConfig.tagline}`,
-  description: siteConfig.description,
+  title: "Next.js Ecommerce Starter — Free Open-Source Template | Epic Design Labs",
+  description:
+    "A free, production-ready Next.js ecommerce starter built with Tailwind CSS and shadcn/ui. Includes cart, checkout, search, auth, wishlist, i18n, SEO, and accessibility. Open source on GitHub.",
   alternates: { canonical: "/" },
+  openGraph: {
+    title: "Next.js Ecommerce Starter — Free Open-Source Template",
+    description:
+      "A free, production-ready Next.js ecommerce starter built with Tailwind CSS and shadcn/ui. Open source on GitHub.",
+    type: "website",
+    url: siteConfig.url,
+  },
+  keywords: [
+    "nextjs ecommerce starter",
+    "next.js ecommerce template",
+    "nextjs store template",
+    "react ecommerce starter",
+    "tailwind ecommerce template",
+    "shadcn ecommerce",
+    "free ecommerce template",
+    "open source ecommerce",
+    "nextjs shopping cart",
+    "ecommerce starter kit",
+  ],
 }
 
 export default async function HomePage() {
@@ -34,8 +54,8 @@ export default async function HomePage() {
             Next.js Ecommerce Starter
           </h1>
           <p className="mt-6 text-lg text-muted-foreground">
-            Discover our collection of carefully selected items designed to
-            elevate your everyday life.
+            A free, open-source ecommerce template built with Next.js, Tailwind CSS, and shadcn/ui.
+            Production-ready, fully responsive, and designed to connect to any checkout system.
           </p>
           <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:justify-center">
             <Button size="lg" asChild>
@@ -103,6 +123,32 @@ export default async function HomePage() {
         </div>
         <div className="mt-8">
           <ProductGrid products={featuredProducts} />
+        </div>
+      </section>
+
+      {/* Developer CTA */}
+      <section className="border-t bg-neutral-50">
+        <div className="mx-auto flex max-w-[1440px] flex-col items-center px-4 py-16 text-center sm:px-6 lg:px-8">
+          <h2 className="text-2xl font-bold tracking-tight sm:text-3xl">
+            Need help building your store?
+          </h2>
+          <p className="mt-4 max-w-xl text-muted-foreground">
+            This starter is free and open source. Grab it from GitHub and build your own,
+            or work with our team at Epic Design Labs to bring your vision to life.
+          </p>
+          <div className="mt-8 flex flex-col gap-4 sm:flex-row">
+            <Button size="lg" asChild>
+              <Link href="https://github.com/Epic-Design-Labs/nextjs-ecommerce-starter" target="_blank" rel="noopener noreferrer">
+                Get the Starter
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Link>
+            </Button>
+            <Button size="lg" variant="outline" asChild>
+              <Link href="https://epicdesignlabs.com" target="_blank" rel="noopener noreferrer">
+                Hire a Developer
+              </Link>
+            </Button>
+          </div>
         </div>
       </section>
 

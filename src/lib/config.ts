@@ -5,10 +5,10 @@
 
 export const siteConfig = {
   // Branding
-  name: "Store Name",
-  tagline: "Quality products, thoughtfully curated.",
+  name: "Next.js Ecommerce Starter",
+  tagline: "A free, open-source Next.js ecommerce template.",
   description:
-    "Discover our curated collection of quality products. Free shipping on orders over $75.",
+    "A free, production-ready Next.js ecommerce starter template built with Tailwind CSS and shadcn/ui. Responsive, accessible, SEO optimized, and ready to connect to any checkout system. Built by Epic Design Labs.",
 
   // Announcement bar (set to "" to hide)
   announcement: "Free shipping on all orders over $75 — Shop now!",
@@ -18,24 +18,24 @@ export const siteConfig = {
 
   // Contact
   contact: {
-    email: "support@store.com",
-    phone: "(555) 123-4567",
+    email: "support@epicdesignlabs.com",
+    phone: "",
     address: {
-      street: "123 Main Street",
-      suite: "Suite 100",
-      city: "San Francisco",
-      state: "CA",
-      zip: "94105",
+      street: "",
+      suite: "",
+      city: "",
+      state: "",
+      zip: "",
     },
   },
 
   // Social links (set to "" to hide)
   social: {
-    twitter: "#",
-    instagram: "#",
-    facebook: "#",
-    youtube: "#",
-    tiktok: "#",
+    twitter: "https://x.com/epicdesignlabs",
+    instagram: "https://instagram.com/epicdesignlabs",
+    facebook: "https://facebook.com/epicdesignlabs",
+    youtube: "",
+    tiktok: "",
   },
 
   // Shipping
