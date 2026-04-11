@@ -81,7 +81,7 @@ export default function ContactPage() {
               <a
                 href="https://epicdesignlabs.com"
                 target="_blank"
-                rel="noopener noreferrer"
+                rel="noopener"
                 className="text-sm text-muted-foreground hover:text-foreground hover:underline"
               >
                 epicdesignlabs.com
@@ -99,7 +99,7 @@ export default function ContactPage() {
               <a
                 href="https://github.com/Epic-Design-Labs/nextjs-ecommerce-starter"
                 target="_blank"
-                rel="noopener noreferrer"
+                rel="noopener"
                 className="text-sm text-muted-foreground hover:text-foreground hover:underline"
               >
                 View on GitHub

@@ -35,7 +35,7 @@ export default function AboutPage() {
           <a
             href="https://epicdesignlabs.com"
             target="_blank"
-            rel="noopener noreferrer"
+            rel="noopener"
             className="underline hover:text-foreground"
           >
             Epic Design Labs
@@ -76,7 +76,7 @@ export default function AboutPage() {
           <a
             href="https://epicdesignlabs.com"
             target="_blank"
-            rel="noopener noreferrer"
+            rel="noopener"
             className="underline hover:text-foreground"
           >
             epicdesignlabs.com
