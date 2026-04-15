@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
+import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card"
 import { Separator } from "@/components/ui/separator"
 
 interface AuthCardLayoutProps {
@@ -23,7 +23,7 @@ export function AuthCardLayout({
     <div className="mx-auto flex min-h-[60vh] max-w-md items-center px-4 py-16">
       <Card className="w-full">
         <CardHeader className="text-center">
-          <CardTitle className="text-2xl">{title}</CardTitle>
+          <h1 className="text-2xl font-bold tracking-tight">{title}</h1>
           <p className="text-sm text-muted-foreground">{subtitle}</p>
         </CardHeader>
         <CardContent>{children}</CardContent>
