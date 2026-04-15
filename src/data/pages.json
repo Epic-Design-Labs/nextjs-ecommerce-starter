@@ -1,0 +1,31 @@
+{
+  "pages": [
+    {
+      "id": "page-1",
+      "title": "Our Story",
+      "slug": "our-story",
+      "excerpt": "How we got started and what drives us.",
+      "body": "<h2>It Started with a Problem</h2><p>A few years ago, we were frustrated. Every online store looked the same. Stock photos, generic product copy, checkout flows that felt like obstacle courses.</p><p>We believed there was a better way — stores that felt personal, products that were genuinely useful, and buying experiences that respected the customer's time.</p><h2>What We Believe</h2><ul><li><strong>Quality over quantity</strong> — We'd rather carry fewer things done right than a catalog full of mediocrity.</li><li><strong>Transparency</strong> — If we can tell you where something comes from, how it's made, and who made it, we will.</li><li><strong>Lasting goods</strong> — Products you'll still love in five years, not five months.</li></ul><h2>Where We're Going</h2><p>We're still figuring it out, and that's the fun part. We add new products when we find ones we love. We work with small makers when we can. And we try to be honest when we get it wrong.</p><p>Thanks for being here.</p>",
+      "publishedAt": "2025-01-15T10:00:00Z",
+      "updatedAt": "2025-04-01T10:00:00Z"
+    },
+    {
+      "id": "page-2",
+      "title": "Shipping & Delivery Details",
+      "slug": "shipping-delivery",
+      "excerpt": "Everything you need to know about how and when your order arrives.",
+      "body": "<h2>How Fast Will My Order Arrive?</h2><p>We process most orders within one business day. Standard shipping typically takes 5-7 business days from dispatch, so you're looking at about a week total door-to-door.</p><h3>Shipping Options</h3><ul><li><strong>Standard (5-7 days):</strong> $5.99 — free over $75</li><li><strong>Express (2-3 days):</strong> $12.99</li><li><strong>Overnight (next day):</strong> $24.99</li></ul><h2>International Shipping</h2><p>We ship to over 40 countries. Rates and delivery times vary by destination, and you'll see the final cost at checkout. We declare the actual value on customs forms — we can't mark packages as gifts.</p><h2>Tracking Your Package</h2><p>You'll get a shipping confirmation email with a tracking number as soon as your order leaves our warehouse. You can also view tracking from your account page.</p><h2>Problems with Delivery?</h2><p>If your package hasn't arrived within 10 business days of shipment, reach out and we'll help figure out what happened. Lost or damaged packages are covered — we'll either send a replacement or refund you.</p>",
+      "publishedAt": "2025-02-10T10:00:00Z",
+      "updatedAt": "2025-04-01T10:00:00Z"
+    },
+    {
+      "id": "page-3",
+      "title": "Sustainability",
+      "slug": "sustainability",
+      "excerpt": "Our approach to sourcing, packaging, and making things that last.",
+      "body": "<h2>Making Less Stuff, Better</h2><p>The most sustainable product is the one that doesn't need to be replaced. We focus on quality, repairability, and timeless design so your purchases last for years, not seasons.</p><h2>Sourcing</h2><p>Whenever we can, we work directly with small makers, family-owned mills, and certified sustainable suppliers. We prioritize:</p><ul><li>Organic and recycled materials</li><li>Fair labor practices</li><li>Regional sourcing to reduce shipping footprint</li><li>Transparent supply chains</li></ul><h2>Packaging</h2><p>All our shipping materials are recyclable or compostable. We've eliminated plastic mailers, bubble wrap, and styrofoam. Your order arrives in a kraft box with paper-based protective fill.</p><h2>What We're Still Working On</h2><p>We're not perfect. Some things we're actively improving:</p><ol><li>Carbon-offset shipping by default (we currently offer it as an option)</li><li>Take-back program for worn-out products</li><li>More regional warehouses to shorten shipping distances</li></ol><p>We publish an annual sustainability report — <a href=\"/contact\">reach out</a> if you'd like a copy.</p>",
+      "publishedAt": "2025-03-01T10:00:00Z",
+      "updatedAt": "2025-04-10T10:00:00Z"
+    }
+  ]
+}

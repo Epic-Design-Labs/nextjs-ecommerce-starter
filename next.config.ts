@@ -1,5 +1,6 @@
 import type { NextConfig } from "next";
 import createNextIntlPlugin from "next-intl/plugin";
+import { redirects as redirectRules } from "./src/lib/redirects";
 
 const withNextIntl = createNextIntlPlugin("./src/i18n/request.ts");
 
@@ -11,15 +12,9 @@ const nextConfig: NextConfig = {
     // ],
   },
 
+  // Redirects are defined in src/lib/redirects.ts — edit there.
   async redirects() {
-    return [
-      // Example redirects — add your own as needed
-      // {
-      //   source: "/old-product-slug",
-      //   destination: "/new-product-slug",
-      //   permanent: true, // 301
-      // },
-    ];
+    return redirectRules;
   },
 };
 

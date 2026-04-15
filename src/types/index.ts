@@ -11,6 +11,35 @@ export interface Brand {
   description: string
 }
 
+// --- CMS-style Pages ---
+
+export interface CmsPage {
+  id: string
+  title: string
+  slug: string
+  /** Short summary shown on the pages index */
+  excerpt?: string
+  /** Full HTML content rendered with .blog-body prose */
+  body: string
+  publishedAt: string
+  updatedAt?: string
+}
+
+// --- Blog Posts ---
+
+export interface BlogPost {
+  id: string
+  title: string
+  slug: string
+  excerpt: string
+  body: string
+  author: string
+  tags: string[]
+  coverImage?: ProductImage
+  publishedAt: string
+  updatedAt?: string
+}
+
 // --- Product ---
 
 export type ProductStatus = "draft" | "active" | "archived"
@@ -52,8 +81,10 @@ export interface Product {
   id: string
   name: string
   slug: string
+  /** Short blurb shown in the product info column (1–2 sentences) */
   description: string
-  body?: string // rich text / HTML
+  /** Full HTML description shown below gallery/add-to-cart (.blog-body prose) */
+  body?: string
   images: ProductImage[]
   status: ProductStatus
   brandId: string

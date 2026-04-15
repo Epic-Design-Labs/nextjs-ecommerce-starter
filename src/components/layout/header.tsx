@@ -16,15 +16,18 @@ import { shopLinks, mobileMenuSections } from "@/lib/navigation"
 import { siteConfig } from "@/lib/config"
 import { useTranslations } from "next-intl"
 import { useState, useEffect, useCallback } from "react"
-import data from "@/data/products.json"
 import type { Category } from "@/types"
-
-const allCategories = data.categories as Category[]
 import { useCartStore } from "@/store/cart"
 import { useAuthStore } from "@/store/auth"
 import { useRouter } from "next/navigation"
 
-export function Header() {
+interface HeaderProps {
+  /** All categories (top-level + subcategories) from the repository layer */
+  categories?: Category[]
+}
+
+export function Header({ categories = [] }: HeaderProps) {
+  const allCategories = categories
   const t = useTranslations("nav")
   const tCommon = useTranslations("common")
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)

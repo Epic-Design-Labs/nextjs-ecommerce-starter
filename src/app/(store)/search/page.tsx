@@ -21,7 +21,7 @@ export default async function SearchPage({ searchParams }: SearchPageProps) {
 
   const hasQuery = query.trim().length > 0
   const results = hasQuery
-    ? await productRepository.search(query, { page, limit: 12 })
+    ? await productRepository.search(query, { page, limit: 40 })
     : null
 
   return (

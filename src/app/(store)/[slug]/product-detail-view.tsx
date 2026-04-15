@@ -27,18 +27,20 @@ import { QuantitySelector } from "@/components/products/quantity-selector"
 import { ProductGrid } from "@/components/products/product-grid"
 import { formatPrice } from "@/lib/utils"
 import { breadcrumbJsonLd } from "@/lib/structured-data"
-import type { Product, Brand } from "@/types"
+import type { Product, Brand, Category } from "@/types"
 
 interface ProductDetailViewProps {
   product: Product
   relatedProducts: Product[]
   brand: Brand | null
+  categoryAncestors?: Category[]
 }
 
 export function ProductDetailView({
   product,
   relatedProducts,
   brand,
+  categoryAncestors = [],
 }: ProductDetailViewProps) {
   const [selectedVariantId, setSelectedVariantId] = useState(
     product.variants[0]?.id ?? ""
@@ -113,6 +115,7 @@ export function ProductDetailView({
 
   const breadcrumbLd = breadcrumbJsonLd([
     { name: "Shop", href: "/shop" },
+    ...categoryAncestors.map((c) => ({ name: c.name, href: `/${c.slug}` })),
     { name: product.name, href: `/${product.slug}` },
   ])
 
@@ -145,16 +148,29 @@ export function ProductDetailView({
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify([jsonLd, breadcrumbLd]) }}
       />
-      {/* Breadcrumb */}
+      {/* Breadcrumb — shows category ancestry; product name is in the H1 below */}
       <Breadcrumb>
         <BreadcrumbList>
           <BreadcrumbItem>
             <BreadcrumbLink render={<Link href="/shop" />}>Shop</BreadcrumbLink>
           </BreadcrumbItem>
-          <BreadcrumbSeparator />
-          <BreadcrumbItem>
-            <BreadcrumbPage>{product.name}</BreadcrumbPage>
-          </BreadcrumbItem>
+          {categoryAncestors.map((cat, idx) => {
+            const isLast = idx === categoryAncestors.length - 1
+            return (
+              <div key={cat.id} className="contents">
+                <BreadcrumbSeparator />
+                <BreadcrumbItem>
+                  {isLast ? (
+                    <BreadcrumbPage>{cat.name}</BreadcrumbPage>
+                  ) : (
+                    <BreadcrumbLink render={<Link href={`/${cat.slug}`} />}>
+                      {cat.name}
+                    </BreadcrumbLink>
+                  )}
+                </BreadcrumbItem>
+              </div>
+            )
+          })}
         </BreadcrumbList>
       </Breadcrumb>
 
@@ -259,6 +275,18 @@ export function ProductDetailView({
           <TrustSignals />
         </div>
       </div>
+
+      {/* Full HTML description (below gallery/add-to-cart) */}
+      {product.body && (
+        <section className="mt-16 border-t pt-12">
+          <div className="mx-auto max-w-3xl">
+            <div
+              className="blog-body"
+              dangerouslySetInnerHTML={{ __html: product.body }}
+            />
+          </div>
+        </section>
+      )}
 
       {/* Related products */}
       {relatedProducts.length > 0 && (

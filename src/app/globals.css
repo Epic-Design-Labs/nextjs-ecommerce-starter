@@ -165,3 +165,102 @@
     @apply font-sans;
   }
 }
+
+/* ============================================================================
+   .blog-body — Prose styles for rich HTML content
+   Used by: product descriptions, blog posts, CMS pages
+   ============================================================================ */
+
+.blog-body {
+  @apply text-base leading-7 text-foreground/90;
+}
+
+.blog-body > * + * {
+  @apply mt-5;
+}
+
+.blog-body h1 {
+  @apply mt-10 text-3xl font-bold tracking-tight text-foreground;
+}
+
+.blog-body h2 {
+  @apply mt-10 text-2xl font-bold tracking-tight text-foreground;
+}
+
+.blog-body h3 {
+  @apply mt-8 text-xl font-semibold tracking-tight text-foreground;
+}
+
+.blog-body h4 {
+  @apply mt-6 text-lg font-semibold tracking-tight text-foreground;
+}
+
+.blog-body p {
+  @apply leading-7;
+}
+
+.blog-body ul {
+  @apply list-disc space-y-2 pl-6;
+}
+
+.blog-body ol {
+  @apply list-decimal space-y-2 pl-6;
+}
+
+.blog-body li {
+  @apply leading-7;
+}
+
+.blog-body li > ul,
+.blog-body li > ol {
+  @apply mt-2;
+}
+
+.blog-body a {
+  @apply text-foreground underline underline-offset-4 transition-colors hover:text-foreground/70;
+}
+
+.blog-body blockquote {
+  @apply border-l-4 border-border pl-6 italic text-muted-foreground;
+}
+
+.blog-body img {
+  @apply rounded-lg;
+}
+
+.blog-body hr {
+  @apply my-10 border-border;
+}
+
+.blog-body code {
+  @apply rounded-sm bg-muted px-1.5 py-0.5 font-mono text-[0.875em];
+}
+
+.blog-body pre {
+  @apply overflow-x-auto rounded-lg bg-neutral-900 p-4 text-sm text-neutral-100;
+}
+
+.blog-body pre code {
+  @apply bg-transparent p-0 text-inherit;
+}
+
+.blog-body strong {
+  @apply font-semibold text-foreground;
+}
+
+.blog-body em {
+  @apply italic;
+}
+
+.blog-body table {
+  @apply w-full border-collapse text-sm;
+}
+
+.blog-body th,
+.blog-body td {
+  @apply border border-border px-3 py-2 text-left;
+}
+
+.blog-body th {
+  @apply bg-muted font-semibold;
+}

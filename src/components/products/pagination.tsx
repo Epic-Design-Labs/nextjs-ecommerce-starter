@@ -24,9 +24,13 @@ export function Pagination({
     return `${basePath}?${params.toString()}`
   }
 
+  // Sliding 6-page window: keep 6 visible pages centered on current where possible
+  const WINDOW_SIZE = 6
   const pages: number[] = []
-  const start = Math.max(1, page - 2)
-  const end = Math.min(totalPages, page + 2)
+  let start = Math.max(1, page - Math.floor(WINDOW_SIZE / 2))
+  const end = Math.min(totalPages, start + WINDOW_SIZE - 1)
+  // If we're near the end, shift window back so we always show up to WINDOW_SIZE pages
+  start = Math.max(1, end - WINDOW_SIZE + 1)
   for (let i = start; i <= end; i++) {
     pages.push(i)
   }

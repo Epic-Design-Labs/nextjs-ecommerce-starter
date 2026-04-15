@@ -17,6 +17,19 @@ interface CategoryViewProps {
   products: Product[]
   pagination: PaginationMeta
   subcategories?: Category[]
+  ancestors?: Category[]
+}
+
+/** Strip parent name prefix from a subcategory display name */
+function stripParentPrefix(name: string, parentName: string): string {
+  const patterns = [
+    new RegExp(`^${parentName}\\s*[-–—:|]\\s*`, "i"),
+    new RegExp(`^${parentName}\\s+`, "i"),
+  ]
+  for (const pattern of patterns) {
+    if (pattern.test(name)) return name.replace(pattern, "")
+  }
+  return name
 }
 
 export function CategoryView({
@@ -24,28 +37,45 @@ export function CategoryView({
   products,
   pagination,
   subcategories = [],
+  ancestors = [],
 }: CategoryViewProps) {
+  // Full ancestor trail for breadcrumbs — e.g. Shop > Electronics > Headphones
+  const trail = [
+    { name: "Shop", href: "/shop" },
+    ...ancestors.map((c) => ({ name: c.name, href: `/${c.slug}` })),
+  ]
+
   return (
     <div className="mx-auto max-w-[1440px] px-4 py-8 sm:px-6 lg:px-8">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(breadcrumbJsonLd([
-            { name: "Shop", href: "/shop" },
-            { name: category.name, href: `/${category.slug}` },
-          ])),
+          __html: JSON.stringify(breadcrumbJsonLd(trail)),
         }}
       />
-      {/* Breadcrumb */}
+      {/* Breadcrumb — full ancestor trail */}
       <Breadcrumb>
         <BreadcrumbList>
           <BreadcrumbItem>
             <BreadcrumbLink render={<Link href="/shop" />}>Shop</BreadcrumbLink>
           </BreadcrumbItem>
-          <BreadcrumbSeparator />
-          <BreadcrumbItem>
-            <BreadcrumbPage>{category.name}</BreadcrumbPage>
-          </BreadcrumbItem>
+          {ancestors.map((cat, idx) => {
+            const isLast = idx === ancestors.length - 1
+            return (
+              <div key={cat.id} className="contents">
+                <BreadcrumbSeparator />
+                <BreadcrumbItem>
+                  {isLast ? (
+                    <BreadcrumbPage>{cat.name}</BreadcrumbPage>
+                  ) : (
+                    <BreadcrumbLink render={<Link href={`/${cat.slug}`} />}>
+                      {cat.name}
+                    </BreadcrumbLink>
+                  )}
+                </BreadcrumbItem>
+              </div>
+            )
+          })}
         </BreadcrumbList>
       </Breadcrumb>
 
@@ -61,22 +91,16 @@ export function CategoryView({
         </p>
       </div>
 
-      {/* Subcategories */}
+      {/* Subcategories — parent prefix stripped, no "All" pill */}
       {subcategories.length > 0 && (
         <div className="mt-6 flex flex-wrap gap-2">
-          <Link
-            href={`/${category.slug}`}
-            className="rounded-full border border-foreground bg-foreground px-3 py-1 text-xs font-medium text-background transition-colors"
-          >
-            All {category.name}
-          </Link>
           {subcategories.map((sub) => (
             <Link
               key={sub.id}
               href={`/${sub.slug}`}
               className="rounded-full border border-border px-3 py-1 text-xs font-medium transition-colors hover:border-foreground"
             >
-              {sub.name}
+              {stripParentPrefix(sub.name, category.name)}
             </Link>
           ))}
         </div>

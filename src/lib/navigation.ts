@@ -27,6 +27,8 @@ export const accountLinks: NavItem[] = [
 
 export const infoLinks: NavItem[] = [
   { name: "All Brands", href: "/brands" },
+  { name: "Blog", href: "/blog" },
+  { name: "Pages", href: "/pages" },
   { name: "About", href: "/about" },
   { name: "Contact", href: "/contact" },
   { name: "FAQ", href: "/faq" },

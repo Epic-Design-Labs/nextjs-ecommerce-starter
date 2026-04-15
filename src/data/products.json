@@ -159,7 +159,8 @@
       "updatedAt": "2025-01-15T10:00:00Z",
       "rating": 4.5,
       "reviewCount": 128,
-      "brandId": "brand-1"
+      "brandId": "brand-1",
+      "body": "<h2>Immersive Sound, Anywhere</h2><p>Experience studio-quality audio whether you're commuting, working, or relaxing at home. Our wireless over-ear headphones combine premium 40mm drivers with advanced noise-cancelling technology to deliver rich, balanced sound across every frequency.</p><h3>Key Features</h3><ul><li><strong>Active Noise Cancellation</strong> — Three ANC modes adapt to your environment</li><li><strong>30-Hour Battery</strong> — Full day of listening on a single charge</li><li><strong>Memory Foam Cushions</strong> — Designed for extended wear</li><li><strong>Bluetooth 5.3</strong> — Stable connection up to 30 feet</li></ul><h3>Built to Last</h3><p>Constructed with aircraft-grade aluminum and premium vegan leather, these headphones are designed to accompany you for years. Every component — from the adjustable headband to the swiveling ear cups — has been engineered for durability and comfort.</p><blockquote>These are hands-down the most comfortable headphones I've ever owned. The sound is crisp, the noise cancellation is incredible, and I can wear them all day without any discomfort.</blockquote><h3>What's in the Box</h3><ul><li>Wireless headphones</li><li>Premium carrying case</li><li>USB-C charging cable</li><li>3.5mm audio cable</li><li>Quick start guide</li></ul>"
     },
     {
       "id": "prod-2",
@@ -230,7 +231,8 @@
       "updatedAt": "2025-01-20T10:00:00Z",
       "rating": 4.8,
       "reviewCount": 64,
-      "brandId": "brand-2"
+      "brandId": "brand-2",
+      "body": "<h2>Thoughtful Light for Your Workspace</h2><p>A desk lamp designed to disappear into the background until you need it. The adjustable arm and tunable color temperature mean you can shape your lighting for focused work, relaxed reading, or video calls.</p><h3>Features</h3><ul><li>Three brightness levels</li><li>Warm-to-cool color temperature dial</li><li>Flexible aluminum arm</li><li>Weighted base for stability</li><li>USB-C powered</li></ul><h3>Design</h3><p>The minimalist silhouette fits any workspace — home office, studio, or shared desk. Available in silver or matte black.</p>"
     },
     {
       "id": "prod-3",
@@ -357,7 +359,8 @@
       "updatedAt": "2025-02-01T10:00:00Z",
       "rating": 4.3,
       "reviewCount": 256,
-      "brandId": "brand-3"
+      "brandId": "brand-3",
+      "body": "<h2>The Perfect Everyday Tee</h2><p>We spent two years sourcing the right organic cotton and perfecting the fit. The result is a t-shirt that feels like a favorite from day one.</p><h3>Details</h3><ul><li>100% GOTS-certified organic cotton</li><li>Heavyweight 6.5oz fabric</li><li>Garment-dyed for a lived-in feel</li><li>Pre-shrunk</li><li>Side seams for a clean drape</li></ul><h3>Care</h3><p>Machine wash cold, tumble dry low. The more you wash it, the better it gets.</p>"
     },
     {
       "id": "prod-4",

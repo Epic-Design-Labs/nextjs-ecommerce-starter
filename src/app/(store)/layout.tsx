@@ -3,12 +3,17 @@ import { Footer } from "@/components/layout/footer"
 import { AnnouncementBar } from "@/components/layout/announcement-bar"
 import { CartDrawer } from "@/components/cart/cart-drawer"
 import { BackToTop } from "@/components/layout/back-to-top"
+import { categoryRepository } from "@/lib/repositories"
 
-export default function StoreLayout({
+export default async function StoreLayout({
   children,
 }: {
   children: React.ReactNode
 }) {
+  // Fetch category tree server-side so the Header doesn't depend on
+  // a specific data source — the repository layer handles that.
+  const categories = await categoryRepository.list()
+
   return (
     <>
       <a
@@ -18,8 +23,10 @@ export default function StoreLayout({
         Skip to content
       </a>
       <AnnouncementBar />
-      <Header />
-      <main id="main-content" className="flex-1">{children}</main>
+      <Header categories={categories} />
+      <main id="main-content" className="flex-1">
+        {children}
+      </main>
       <Footer />
       <CartDrawer />
       <BackToTop />

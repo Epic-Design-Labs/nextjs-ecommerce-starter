@@ -1,0 +1,34 @@
+{
+  "posts": [
+    {
+      "id": "post-1",
+      "title": "How to Choose the Right Headphones for Your Lifestyle",
+      "slug": "choose-right-headphones",
+      "excerpt": "Over-ear, on-ear, in-ear, bone conduction — we break down the categories and help you find the right pair for how you actually listen.",
+      "body": "<p>Buying headphones used to be easy: there were a few models, they all looked the same, and they plugged into your phone. Now there are dozens of form factors, wireless protocols, and feature sets — enough to make anyone freeze at checkout.</p><p>Here's a quick way to narrow it down.</p><h2>Start with How You Listen</h2><p>Before anything else, think about <em>where</em> you use headphones most. Commuting? Working from home? Running? The answer should drive almost every other decision.</p><h3>Commuters and Travelers</h3><p>Active noise cancellation (ANC) is worth every penny. Look for over-ear models with 25+ hours of battery life.</p><h3>Home Office</h3><p>Comfort trumps everything — you'll be wearing these 8+ hours a day. Memory foam ear cushions and light clamping force matter more than flashy features.</p><h3>Runners and Gym</h3><p>Over-ear is a nonstarter. You want true wireless earbuds with an IP rating of at least IPX4, plus secure-fit ear tips or wingtips.</p><h2>Don't Get Stuck on Specs</h2><p>Frequency response and driver size tell you almost nothing about how headphones actually sound. Read reviews from people whose taste aligns with yours, or better yet — try before you buy.</p><h2>Budget Sweet Spots</h2><ul><li><strong>$50-100:</strong> Surprisingly good wireless earbuds from brands like JLab and Anker</li><li><strong>$150-250:</strong> The biggest jump in quality — this is where most people should land</li><li><strong>$300+:</strong> Diminishing returns unless you're a professional or audiophile</li></ul><p>Questions about a specific pair? <a href=\"/contact\">Reach out</a> — we're happy to help you decide.</p>",
+      "author": "The Team",
+      "tags": ["guides", "electronics", "audio"],
+      "publishedAt": "2025-03-15T10:00:00Z"
+    },
+    {
+      "id": "post-2",
+      "title": "Why We Switched to Organic Cotton",
+      "slug": "why-organic-cotton",
+      "excerpt": "Conventional cotton uses 16% of the world's insecticides. Here's what that means, and why we moved our entire apparel line to certified organic.",
+      "body": "<p>Two years ago, we made a quiet decision: every cotton product we sell would be certified organic by the end of 2025. We hit that target last month. Here's why we did it, and what we learned along the way.</p><h2>The Case Against Conventional Cotton</h2><p>Cotton is one of the most chemical-intensive crops on earth. Despite covering only 2.5% of global farmland, it accounts for 16% of insecticide use and 7% of pesticide use. It's also thirsty — a single t-shirt can require up to 2,700 liters of water to produce.</p><h2>What \"Organic\" Actually Means</h2><p>Real organic certification (we use GOTS) means:</p><ul><li>No synthetic pesticides or fertilizers</li><li>No GMO seeds</li><li>Rigorous labor standards throughout the supply chain</li><li>Restrictions on dyes and finishing chemicals</li></ul><p>It's not marketing. It's audited.</p><h2>The Tradeoffs</h2><p>Organic cotton isn't cheap. Our wholesale costs went up 30-40%. We absorbed most of that rather than pass it on — our prices rose about 10%.</p><p>Quality-wise? The fabric feels better. Longer staple fibers make for softer, more durable garments. After a year of wearing our new tees, we haven't seen the pilling or thinning we used to get on conventional cotton.</p><h2>What's Next</h2><p>Cotton was the first step. We're now working through our non-cotton lines — wool, linen, hemp — and looking at recycled synthetics for our bags and outerwear.</p><p>If you've got questions or suggestions, we'd love to hear them.</p>",
+      "author": "The Team",
+      "tags": ["sustainability", "clothing", "behind-the-scenes"],
+      "publishedAt": "2025-03-01T10:00:00Z"
+    },
+    {
+      "id": "post-3",
+      "title": "A Beginner's Guide to Pour-Over Coffee",
+      "slug": "pour-over-coffee-guide",
+      "excerpt": "Better coffee with the simplest setup possible. Here's how to get started in under ten minutes a morning.",
+      "body": "<p>Pour-over coffee has a reputation for being fussy — all those scales and gooseneck kettles and timing charts. It doesn't have to be. With a basic setup and about ten minutes, you can make coffee that's noticeably better than anything you'd get from a drip machine.</p><h2>What You Need</h2><ul><li>A pour-over dripper (we like ceramic, but anything works)</li><li>Paper filters</li><li>A kettle — any kettle, doesn't need to be fancy</li><li>Fresh whole beans</li><li>A burr grinder (the one non-negotiable)</li></ul><h2>The Basic Recipe</h2><ol><li><strong>Boil water.</strong> Let it cool for 30 seconds after boiling.</li><li><strong>Grind 20g of beans</strong> to a medium coarseness (like table salt).</li><li><strong>Rinse the filter</strong> with hot water to get rid of papery taste.</li><li><strong>Bloom:</strong> Pour just enough water to soak the grounds (about 40g). Wait 30 seconds.</li><li><strong>Pour the rest</strong> slowly in circular motions, aiming for 300g of water total over about 2 minutes.</li></ol><p>That's it. The coffee should taste clean, bright, and distinctly like the beans you used.</p><h2>Common Mistakes</h2><p><strong>Grind too fine.</strong> Water pools, coffee gets bitter.</p><p><strong>Water too hot.</strong> Burns the grounds, makes everything taste harsh.</p><p><strong>Old beans.</strong> Coffee tastes best 7-14 days after roast. Buy small batches.</p><h2>When You're Ready to Go Deeper</h2><p>Once the basics feel natural, try experimenting with brew ratios (we like 1:15 water-to-coffee), pour patterns, and different origins. Pour-over rewards curiosity — every change you make shows up in the cup.</p>",
+      "author": "The Team",
+      "tags": ["guides", "food-and-drink", "coffee"],
+      "publishedAt": "2025-02-20T10:00:00Z"
+    }
+  ]
+}

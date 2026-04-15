@@ -53,7 +53,7 @@ export default async function ShopPage({ searchParams }: ShopPageProps) {
       search: searchQuery,
     },
     sort,
-    { page, limit: 12 }
+    { page, limit: 40 }
   )
 
   const allCategories = await categoryRepository.list()

@@ -94,16 +94,26 @@ export default async function SlugPage({ params }: SlugPageProps) {
   // Check product first
   const product = await productRepository.getBySlug(slug)
   if (product) {
-    const [relatedProducts, brand] = await Promise.all([
-      product.categoryIds[0]
+    // Pick the most specific category (prefer one with a parentId, i.e. a subcategory)
+    const productCategories = await Promise.all(
+      product.categoryIds.map((id) => categoryRepository.getById(id))
+    )
+    const validCategories = productCategories.filter(
+      (c): c is NonNullable<typeof c> => c !== null
+    )
+    const primaryCategory =
+      validCategories.find((c) => c.parentId) ?? validCategories[0] ?? null
+
+    const [relatedProducts, brand, categoryAncestors] = await Promise.all([
+      primaryCategory
         ? productRepository
-            .getByCategory(
-              (await categoryRepository.getById(product.categoryIds[0]))?.slug ?? "",
-              { page: 1, limit: 5 }
-            )
+            .getByCategory(primaryCategory.slug, { page: 1, limit: 5 })
             .then((r) => r.items.filter((p) => p.id !== product.id).slice(0, 4))
         : Promise.resolve([]),
       brandRepository.getById(product.brandId),
+      primaryCategory
+        ? categoryRepository.getAncestors(primaryCategory.id)
+        : Promise.resolve([]),
     ])
 
     return (
@@ -111,6 +121,7 @@ export default async function SlugPage({ params }: SlugPageProps) {
         product={product}
         relatedProducts={relatedProducts}
         brand={brand}
+        categoryAncestors={categoryAncestors}
       />
     )
   }
@@ -118,16 +129,19 @@ export default async function SlugPage({ params }: SlugPageProps) {
   // Check category
   const category = await categoryRepository.getBySlug(slug)
   if (category) {
-    const [{ items: products, pagination }, subcategories] = await Promise.all([
-      productRepository.getByCategory(slug, { page: 1, limit: 12 }),
-      categoryRepository.getChildren(category.id),
-    ])
+    const [{ items: products, pagination }, subcategories, ancestors] =
+      await Promise.all([
+        productRepository.getByCategory(slug, { page: 1, limit: 40 }),
+        categoryRepository.getChildren(category.id),
+        categoryRepository.getAncestors(category.id),
+      ])
     return (
       <CategoryView
         category={category}
         products={products}
         pagination={pagination}
         subcategories={subcategories}
+        ancestors={ancestors}
       />
     )
   }
@@ -138,7 +152,7 @@ export default async function SlugPage({ params }: SlugPageProps) {
     const { items: products, pagination } = await productRepository.list(
       { tags: [] },
       undefined,
-      { page: 1, limit: 12 }
+      { page: 1, limit: 40 }
     )
     const brandProducts = products.filter((p) => p.brandId === brand.id)
     return (
