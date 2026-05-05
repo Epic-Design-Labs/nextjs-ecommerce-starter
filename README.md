@@ -64,7 +64,7 @@ src/
     (store)/          # Storefront (header/footer layout)
       [slug]/         # Product detail, category, brand pages
       shop/           # Product catalog with filters
-      cart/            # Shopping cart
+      cart/           # Shopping cart
       checkout/        # Checkout + success
       account/         # Dashboard, orders, addresses, settings
       auth/            # Login, register, forgot password
