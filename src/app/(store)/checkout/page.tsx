@@ -209,7 +209,7 @@ export default function CheckoutPage() {
             <CardContent>
               <p className="text-sm text-muted-foreground">
                 This is a demo store. No real payment will be processed.
-                In production, this section connects to your payment provider (e.g., Throttle).
+                In production, this section connects to your payment provider.
               </p>
             </CardContent>
           </Card>

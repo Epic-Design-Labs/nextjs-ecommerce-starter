@@ -2,8 +2,8 @@ import type { Cart, CheckoutProvider, CheckoutSession, WebhookResult, Address } 
 
 /**
  * Demo checkout provider that works without any external services.
- * Replace this with ThrottleCheckoutProvider or any payment provider
- * by implementing the same CheckoutProvider interface.
+ * Replace this with your own provider (e.g. Stripe) by implementing
+ * the same CheckoutProvider interface.
  */
 export const demoCheckoutProvider: CheckoutProvider = {
   async createSession(

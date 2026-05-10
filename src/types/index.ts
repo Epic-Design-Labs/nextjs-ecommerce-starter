@@ -307,7 +307,7 @@ export interface ProductFilters {
   tags?: string[]
 }
 
-// --- Checkout Provider (Throttle-Ready) ---
+// --- Checkout Provider ---
 
 export interface CheckoutSession {
   id: string

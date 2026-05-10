@@ -124,7 +124,7 @@ interface CheckoutProvider {
 }
 ```
 
-Ships with a demo provider. To connect Stripe, Throttle, or any payment system, implement the interface and swap the export in `src/lib/checkout/index.ts`.
+Ships with a demo provider. To connect Stripe or any other payment system, implement the interface and swap the export in `src/lib/checkout/index.ts`.
 
 ## Pages
 

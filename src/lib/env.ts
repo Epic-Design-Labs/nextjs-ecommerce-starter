@@ -15,9 +15,6 @@ const envSchema = z.object({
   // NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY: z.string().startsWith("pk_"),
   // STRIPE_WEBHOOK_SECRET: z.string().startsWith("whsec_"),
 
-  // Uncomment when integrating Throttle:
-  // THROTTLE_API_KEY: z.string().min(1),
-  // THROTTLE_WEBHOOK_SECRET: z.string().min(1),
 })
 
 export type Env = z.infer<typeof envSchema>

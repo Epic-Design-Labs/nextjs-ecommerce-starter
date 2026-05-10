@@ -104,11 +104,11 @@ interface CheckoutProvider {
 
 ### Steps:
 
-1. Create `src/lib/checkout/throttle-provider.ts` (or stripe, etc.)
+1. Create `src/lib/checkout/your-provider.ts` (e.g. `stripe-provider.ts`)
 2. Implement the `CheckoutProvider` interface
 3. Export it from `src/lib/checkout/index.ts`:
    ```typescript
-   export { throttleProvider as checkoutProvider } from "./throttle-provider"
+   export { yourProvider as checkoutProvider } from "./your-provider"
    ```
 4. Add API routes for webhooks in `src/app/api/`
 5. Add your API keys to `.env.local` and uncomment validation in `src/lib/env.ts`
