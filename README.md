@@ -65,7 +65,7 @@ src/
       [slug]/         # Product detail, category, brand pages
       shop/           # Product catalog with filters
       cart/           # Shopping cart
-      checkout/        # Checkout + success
+      checkout/       # Checkout + success
       account/         # Dashboard, orders, addresses, settings
       auth/            # Login, register, forgot password
       brands/          # All brands page
