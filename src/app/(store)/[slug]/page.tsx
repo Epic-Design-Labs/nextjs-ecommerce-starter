@@ -29,12 +29,43 @@ export async function generateStaticParams() {
   return [...productSlugs, ...categorySlugs, ...brandSlugs]
 }
 
+type SlugKind = "product" | "category" | "brand"
+
+/**
+ * Decide what a slug refers to before fetching anything expensive.
+ *
+ * Category and brand lookups are served from a cached list — an in-memory
+ * find, no network. Product detail is a live Foundry call. The original order
+ * asked the expensive question first, so every category page view fired a
+ * guaranteed-404 product lookup, twice per request (generateMetadata and the
+ * page), each one a real Aurora query.
+ *
+ * Falls through to "product" when the slug is neither: only then is a network
+ * call worth making, and a miss there is a genuine 404.
+ *
+ * Precedence note: a slug matching BOTH a category and a product now resolves
+ * to the category, where it previously resolved to the product. Preserving the
+ * old precedence would mean always paying for the product lookup, which is the
+ * cost being removed.
+ */
+async function resolveSlugKind(slug: string): Promise<SlugKind> {
+  const [category, brand] = await Promise.all([
+    categoryRepository.getBySlug(slug),
+    brandRepository.getBySlug(slug),
+  ])
+  if (category) return "category"
+  if (brand) return "brand"
+  return "product"
+}
+
 export async function generateMetadata({
   params,
 }: SlugPageProps): Promise<Metadata> {
   const { slug } = await params
+  const kind = await resolveSlugKind(slug)
 
-  const product = await productRepository.getBySlug(slug)
+  const product =
+    kind === "product" ? await productRepository.getBySlug(slug) : null
   if (product) {
     const variant = product.variants[0]
     const price = variant ? formatPrice(variant.price, variant.currency) : ""
@@ -60,7 +91,8 @@ export async function generateMetadata({
     }
   }
 
-  const category = await categoryRepository.getBySlug(slug)
+  const category =
+    kind === "category" ? await categoryRepository.getBySlug(slug) : null
   if (category) {
     return {
       title: category.name,
@@ -75,7 +107,8 @@ export async function generateMetadata({
     }
   }
 
-  const brand = await brandRepository.getBySlug(slug)
+  const brand =
+    kind === "brand" ? await brandRepository.getBySlug(slug) : null
   if (brand) {
     return {
       title: brand.name,
@@ -95,9 +128,11 @@ export async function generateMetadata({
 
 export default async function SlugPage({ params }: SlugPageProps) {
   const { slug } = await params
+  const kind = await resolveSlugKind(slug)
 
   // Check product first
-  const product = await productRepository.getBySlug(slug)
+  const product =
+    kind === "product" ? await productRepository.getBySlug(slug) : null
   if (product) {
     // Pick the most specific category (prefer one with a parentId, i.e. a subcategory)
     const productCategories = await Promise.all(
@@ -132,7 +167,8 @@ export default async function SlugPage({ params }: SlugPageProps) {
   }
 
   // Check category
-  const category = await categoryRepository.getBySlug(slug)
+  const category =
+    kind === "category" ? await categoryRepository.getBySlug(slug) : null
   if (category) {
     const [{ items: products, pagination }, subcategories, ancestors] =
       await Promise.all([
@@ -152,7 +188,8 @@ export default async function SlugPage({ params }: SlugPageProps) {
   }
 
   // Check brand
-  const brand = await brandRepository.getBySlug(slug)
+  const brand =
+    kind === "brand" ? await brandRepository.getBySlug(slug) : null
   if (brand) {
     const { items: products, pagination } = await productRepository.list(
       { tags: [] },
